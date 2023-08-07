@@ -1,0 +1,125 @@
+.myProfile {
+    position: relative;
+}
+
+.myProfile img {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.myProfile .mask-top-container, .myProfile .mask-bottom-container {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 51%;
+    overflow: hidden;
+}
+
+.myProfile .mask-bottom-container {
+    top: 50%;
+}
+
+.myProfile .mask-top, .myProfile .mask-bottom {
+    width: 100%;
+    height: 101%;
+    background: var(--offset-button);
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-backface-visibility: hidden;
+}
+
+.myProfile .mask-bottom {
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+.myProfile.onload .mask-top {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.myProfile.onload .mask-bottom {
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.go-up-1 {
+    animation: go-up 1s ease 200ms backwards;
+}
+
+.go-up-2 {
+    animation: go-up 1.2s ease 200ms backwards;
+}
+
+.go-up-3 {
+    animation: go-up 1.4s ease 200ms backwards;
+}
+
+.go-up-4 {
+    animation: go-up 1.6s ease 200ms backwards;
+}
+
+.drop-down-1 {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-down-2 {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-down-3 {
+    animation: drop-in 1.2s ease 200ms backwards;
+}
+
+.drop-down-4 {
+    animation: drop-in 1.25s ease 200ms backwards;
+}
+
+.drop-down-5 {
+    animation: drop-in 1.30s ease 200ms backwards;
+}
+
+.drop-down-6 {
+    animation: drop-in 1.35s ease 200ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes go-up {
+    from {
+        opacity: 0;
+        transform: translateY(100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}

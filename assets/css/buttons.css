@@ -1,0 +1,117 @@
+.contact-buttons {
+    margin-top: 60px;
+}
+
+.contact-buttons [class*="col-"]  {
+    padding: 0 !important;
+}
+
+.download-resume-button {
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    font: inherit;
+    transition: 0.25s;
+    padding: 10px 40px;
+    color: var(--dark-mode-color);
+    cursor: pointer;
+}
+
+.resume-button-section {
+    padding-right: 20px;
+    margin: 20px 0;
+}
+
+.circle-button-group {
+    padding-left: 10px;
+}
+
+.circle-button {
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    border: 2px solid var(--background-circle-button);
+    border-radius: 50%;
+    font: inherit;
+    transition: 0.25s;
+    margin: 0 5px;
+    padding: 10px 17px;
+    padding-top: 24px;
+    color: var(--light-mode-color);
+    cursor: pointer;
+}
+
+.circle-button-group button {
+    padding-top: 17px;
+}
+
+.circle-button-offset {
+    box-shadow: 0.2em 0.2em #3f3f3fb1, inset 0.08em 0.08em 0 0  var(--offset-button), inset -1.7em -25em 0 0  #3f3f3fb1;
+}
+
+.circle-button img {
+    filter: invert(99%) sepia(0%) saturate(5070%) hue-rotate(328deg) brightness(124%) contrast(92%);
+    height: 25px;
+}
+
+.download-resume-button-offset {  
+    box-shadow: 0.3em 0.15em #4bbacebd, inset 0.2em 0.08em 0 0  var(--offset-button), inset -1.7em -3em 0 0  #4bbacebd;
+}
+
+.download-resume-button-offset:hover,
+.download-resume-button-offset:focus {
+    box-shadow: 
+        0 0 0 0 var(--lm-accent-color),
+        inset 6em 3.5em 0 0 var(--lm-accent-color);
+}
+
+.circle-button-offset:hover,
+.circle-button-offset:focus {
+    box-shadow: 
+        0 0 0 0 var(--background-circle-button),
+        inset 6em 3.5em 0 0 var(--background-circle-button);
+}
+
+.view-button {
+    margin-top: 10px;
+}
+
+.circle-button-group-contact {
+    margin: 50px 0;
+}
+
+.circle-button-group-contact a {
+    padding: 20px 25px;
+    padding-top: 35px;
+    margin: 20px 5px;
+}
+
+.circle-button-group-contact button {
+    padding: 20px 25px;
+    padding-top: 22px;
+    margin: 20px 5px;
+}
+
+.circle-button-group-contact a img, .circle-button-group-contact button img {
+    height: 30px;
+    /* margin: 30px 20px;
+    margin-bottom: 0; */
+}
+
+@media screen and (max-width: 1250px) {
+    .resume-button-section {
+        width: 100% !important;
+        margin-right: 20px;
+    }
+
+    .circle-button-group {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .circle-button-group-contact a {
+        display: inline-flex;
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,18 @@
+:root {
+    --primary-text: 'Kanit', sans-serif;
+    --secondary-text: Consolas, monaco, monospace; 
+
+    --primary-color: #4bbace;
+    --lm-accent-color: #37b2c8;
+    --neon-primary: #2CD0E2;
+
+    --lm-primary-color: #003046;
+
+    --dark-mode-color: #171717;
+    --light-mode-color: #f5f5f5;
+
+    --background-light-mode: #b8dee45c;
+
+    --background-circle-button: #3f3f3f;
+    --offset-button: #e5f3f5;
+}

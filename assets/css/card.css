@@ -1,0 +1,151 @@
+/* .card {
+    background-color: #00304618;
+    border: 2px solid #00304637;
+    border-radius: 10px;
+    padding: 10px;
+    transform: rotate(10deg);
+} */
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 7;
+    width: 93%;
+    height: 100%;
+    border: 2px solid #00304637;
+    background-color: none;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transform: rotate(2deg);
+}
+  
+.background {
+    position: absolute;
+    top: 0;
+    left: 7;
+    width: 93%;
+    height: 100%;
+    background-color: #0030461e;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transform: rotate(-1deg);
+}
+  
+.content {
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.dark-mode .background {
+    background-color: #3f3f3fb1;
+}
+
+.dark-mode .border {
+    border: 2px solid var(--background-circle-button);
+}
+
+.skills .col-4, .about .col-12 {
+    position: relative;
+    margin: 20px 0;
+}
+
+.projects .col-12 {
+    position: relative;
+    margin: 40px 0;
+}
+
+.skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.skill-card {
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    background-color: none;
+    border: 2px solid #00304637;
+    margin: 5px 5px;
+    padding: 0 10px;
+}
+
+.dark-mode .skills .skill-card {
+    border: 2px solid var(--lm-accent-color);
+}
+
+.skill-card p {
+    margin-bottom: 0 !important;
+}
+
+.skill-card img {
+    margin-top: 10px;
+    filter: invert(14%) sepia(89%) saturate(741%) hue-rotate(160deg) brightness(97%) contrast(102%);
+    width: 60px;
+}
+
+.dark-mode .skills .skill-card img {
+    filter: invert(56%) sepia(63%) saturate(421%) hue-rotate(141deg) brightness(94%) contrast(97%);
+}
+   
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+}
+
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+
+@keyframes come-in {
+    to { transform: translateY(0); }
+}
+
+.col-12 .card {
+    padding: 10px 20px;
+}
+
+/* .dark-mode .col-12 .card {
+
+} */
+
+/* .col-12 img {
+    margin: 0 10px;
+} */
+
+.tech-container {
+    display: flex; /* or display: grid; */
+    flex-wrap: wrap; /* or other grid properties */
+    gap: 10px; /* Adjust the spacing as needed */
+}
+
+.tech-used {
+    padding: 2px 10px;
+    margin: 0 2px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #3f3f3f4e;
+}
+
+.dark-mode .tech-used {
+    background-color: #3f3f3fe0;
+}
+
+.about .card {
+    padding: 10px 20px;
+}

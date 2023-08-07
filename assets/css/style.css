@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+@import url('./columns.css');
+@import url('./root.css');
+@import url('./buttons.css');
+@import url('./animate.css');
+@import url('./card.css');
+@import url('./modal.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Portfolio Body */
+body {
+    margin: 0;
+    background-color: var(--background-light-mode);
+    color: var(--lm-primary-color);
+}
+
+form {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.4rem;
+    text-shadow: 0px 1px, 2px 0px 2px rgba(0, 0, 0, 0.1), 1px 3px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    margin-bottom: 0 !important;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 900 !important;
+    letter-spacing: 1px;
+}
+
+.skills, .experience, .projects {
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 20px !important;
+}
+
+.dark-mode {
+    background-color: var(--dark-mode-color) !important;
+    color: var(--light-mode-color) !important;
+}
+
+.navbar-dark-mode li a,
+.navbar-dark-mode .logo {
+    color: var(--light-mode-color) !important;
+    font-weight: 100 !important;
+}
+
+/* Top Navigation Bar */
+.header {
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    font-family: var(--primary-text);
+    transition: top 0.3s;
+}
+
+.header.scrolled {
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header li a {
+    display: block;
+    font-weight: 100;
+    padding: 20px 5px;
+    text-decoration: none;
+    color: var(--lm-primary-color);
+    letter-spacing: 1px;
+    font-weight: 100 !important;
+}
+
+.header li a .svg-nav-icon {
+    margin-top: 2px;
+    margin-right: 25px;
+    height: 20px;
+}
+
+.header li a .svg-nav-icon:hover {
+    filter: invert(61%) sepia(50%) saturate(449%) hue-rotate(141deg) brightness(96%) contrast(93%);
+}
+
+.header li a .svg-nav-dm-icon {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(317deg) brightness(110%) contrast(92%);
+}
+
+.header li a:hover,
+.header .menu-btn:hover,
+.navbar-dark-mode li a:hover {
+    color: var(--primary-color) !important;  
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--lm-primary-color);
+    letter-spacing: 1.3px;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0; 
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: var(--background-circle-button);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 100vh;
+    height: 100vh !important;
+    transition: max-height 0.3s ease;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .header .logo {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 15px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+/* Main Content */
+.main-content {
+    padding: 0 50px;
+    font-family: var(--primary-text);
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.intro {
+    padding: 50px;
+}
+
+.programmers-intro, .programmers-doing {
+    font-size: 1.5rem;
+}
+
+.programmers-doing {
+    margin-top: 10px;
+}
+
+.programmers-name {
+    font-size: 4.3rem;
+    font-weight: bolder !important;
+    /* text-shadow: 0px 1px, 1px 0px, 1px 1px; */
+    text-shadow: 0px 1px, 2px 0px 2px rgba(0, 0, 0, 0.1), 1px 3px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
+.highlight-text {
+    color: var(--lm-accent-color);
+}
+
+.gif-profile {
+    width: 100%;
+}
+
+.dm-gif-profile {
+    width: 100%;
+}
+
+.dm-gif-profile:hover {
+    content: url('../gif/dark_mode_hover.gif');
+}
+
+.gif-profile:hover {
+    content: url('../gif/light_mode_hover.gif') !important;
+}
+
+/* Skills Section */
+.skills, .projects, .experience {
+    padding-top: 70px;
+}
+
+/* Projects Section */
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-detail {
+    font-family: var(--secondary-text);
+    font-size: 1.1rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: -20px;
+}
+
+.dark-mode .project-detail {
+    color: var(--primary-color);
+    font-weight: 700 ;
+    filter: brightness(1.15);
+}
+
+.project-description {
+    padding: 20px 0;
+    padding-right: 40px !important;
+    opacity: 0.7;
+}
+
+.projects h1 {
+    margin-top: 0 !important;
+}
+
+/* Experience Section */
+.experience .col-6 {
+    padding: 25px 0;
+}
+
+.experience-title {
+    font-family: var(--secondary-text);
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+.dark-mode .experience-title {
+    color: var(--primary-color);
+    font-weight: 700 ;
+    filter: brightness(1.15);
+}
+
+.about {
+    padding-top: 90px;
+    height: 100vh;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 770px) {
+    .main-content, .intro {
+        padding: 0;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    #homeDisplayPicture {
+        width: 25vh;
+    }
+
+    .programmers-name {
+        font-size: 3rem;
+    }
+}
