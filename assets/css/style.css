@@ -274,6 +274,18 @@ h2 {
     padding-top: 70px;
 }
 
+.skills .vue {
+    padding-top: 0 !important;
+}
+
+.skills .laravel {
+    padding-top: 8px !important;
+}
+
+.skills .bootstrap {
+    padding-top: 15px !important;
+}
+
 /* Projects Section */
 
 .responsive-image {
